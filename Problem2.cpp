@@ -13,7 +13,9 @@ int main (int argc, char **args) {
   int peopleAttending = 0;
 
   //take in input from the user for these two values and find out how many spots are leftover
+  cout << "Enter the maximum capcity of a room: ";
   cin >> maxCap;
+  cout << "Enter the number of people attending: ";
   cin >> peopleAttending;
   int leftover = maxCap - peopleAttending;
 

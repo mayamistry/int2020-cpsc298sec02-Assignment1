@@ -9,11 +9,14 @@ using namespace std;
 int main (int argc, char **args) {
   //takes of the cost of item at present time with the number of years
   float costOfItem;
+  cout << "Enter the cost of an item today: $";
   cin >> costOfItem;
   int numYears;
+  cout << "Enter the number of years: ";
   cin >>  numYears;
   float inflationRate;
   //take in the inflation rate in percent and conver to a decimal value
+  cout << "Enter an inflation rate as a percentage value: ";
   cin >> inflationRate;
   inflationRate = inflationRate / 100;
 
@@ -21,7 +24,7 @@ int main (int argc, char **args) {
    * For loop used to keep changing the price each year based off of the inflation rate
    * @param i - the year count
    */
-  for (int i = 0; i <= numYears; i++) {
+  for (int i = 1; i <= numYears; i++) {
     costOfItem = costOfItem + (costOfItem * inflationRate);
   }
 

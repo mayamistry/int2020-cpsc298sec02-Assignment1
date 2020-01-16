@@ -18,27 +18,28 @@ int main (int argc, char **args) {
   float totalSalary;
 
   //inputs the number of hours the employee worked
+  cout << "Enter number of hours worked: ";
   cin >> hours;
   //if over 40 hours, calculate the over time rate
   if (hours > 40) {
     //overtime pay
     int extraHours = hours - 40;
-    salary = (extraHours * (RATE*1.5)) + (hours * RATE);
+    salary = (extraHours * (RATE*1.5)) + (40 * RATE);
   } else {
     salary = (hours * RATE);
   }
 
   //print gross pay and show all expenses/taxes that apply in the net pay
-  cout << "Gross pay: " << salary << endl;
-  cout << "Social Security tax: " << (salary * SOCIAL_TAX) << endl;
+  cout << "Gross pay: $" << salary << endl;
+  cout << "Social Security tax: $" << (salary * SOCIAL_TAX) << endl;
   totalSalary = salary - (salary * SOCIAL_TAX);
-  cout << "Federal Income tax: " << (salary * FED_TAX) << endl;
-  totalSalary = totalSalary - (salary * SOCIAL_TAX);
-  cout << "State tax: " << (salary * STATE_TAX) << endl;
-  totalSalary = totalSalary - (salary * SOCIAL_TAX);
-  cout << "Medical insurance: " << FED_INSURANCE << endl;
-  totalSalary = totalSalary - (salary - FED_INSURANCE);
-  cout << "Net pay: " << totalSalary;
+  cout << "Federal Income tax: $" << (salary * FED_TAX) << endl;
+  totalSalary = totalSalary - (salary * FED_TAX);
+  cout << "State tax: $" << (salary * STATE_TAX) << endl;
+  totalSalary = totalSalary - (salary * STATE_TAX);
+  cout << "Medical insurance: $" << FED_INSURANCE << endl;
+  totalSalary = totalSalary - FED_INSURANCE;
+  cout << "Net pay: $" << totalSalary << endl;
 
   return 0;
 }
