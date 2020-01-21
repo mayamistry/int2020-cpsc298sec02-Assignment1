@@ -24,7 +24,7 @@ int main (int argc, char **args) {
    * For loop used to keep changing the price each year based off of the inflation rate
    * @param i - the year count
    */
-  for (int i = 1; i <= numYears; i++) {
+  for (int i = 1; i <= numYears; ++i) {
     costOfItem = costOfItem + (costOfItem * inflationRate);
   }
 
