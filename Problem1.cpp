@@ -8,8 +8,8 @@ using namespace std;
 
 int main (int argc, char **args) {
 
-  double packageWeight;
-  double boxes = 0;
+  double packageWeight = 0;
+  int boxes = 0;
   cout << "Enter a package weight in ounces: ";
   cin >> packageWeight; //take in the input of how much the package of cereal weighs in ounces
 
