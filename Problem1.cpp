@@ -20,6 +20,7 @@ int main (int argc, char **args) {
   //display the weight converted in metric tons and how many boxes needed to yield that weight
   cout << "Cereal weight in metric tons: " << packageWeight << endl;
   cout << "Number of boxes to yield one metric ton: " << boxes << endl;
+  cout << "New testing message to make sure git works" << endl;
 
   return 0;
 }
